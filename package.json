@@ -30,32 +30,6 @@
     "publish": "node ./scripts/publish.js",
     "alpha": "node ./scripts/publish.js -a"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "linters": {
-      "*.{js,jsx}": [
-        "eslint --fix",
-        "yarn run prettier",
-        "eslint",
-        "git add"
-      ],
-      "*.{ts,tsx}": [
-        "yarn run prettier --parser typescript",
-        "git add"
-      ],
-      "*.{css,sass,scss,less,sss}": [
-        "stylelint",
-        "git add"
-      ]
-    },
-    "ignore": [
-      "*.min.{js,css}"
-    ]
-  },
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
@@ -71,7 +45,6 @@
     "husky": "^2.1.0",
     "lerna": "^3.13.4",
     "lerna-changelog": "^0.8.2",
-    "lint-staged": "^8.1.5",
     "prettier": "^1.18.2",
     "rimraf": "^2.6.3",
     "shelljs": "^0.8.3",
